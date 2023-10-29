@@ -14,11 +14,13 @@ namespace QuanLyPhongTro.ChillForm
     public partial class frmXuLyPhong : Form
     {
         private bool themPhong;
-        List<tblLoaiPhong> listLoaiPhong = Program.Context.tblLoaiPhongs.ToList();
-        public frmXuLyPhong(bool themPhong)
+        private string maPhong;
+        List<tblLoaiPhong> listLoaiPhong = Program.Context.tblLoaiPhongs.Where(l => l.Hidden != 1).ToList();
+        public frmXuLyPhong(bool themPhong, string maPhong)
         {
             InitializeComponent();
             this.themPhong = themPhong;
+            this.maPhong = maPhong;
         }
 
         private void frmXuLyPhong_Load(object sender, EventArgs e)
@@ -73,8 +75,20 @@ namespace QuanLyPhongTro.ChillForm
             }
             else
             {
+                var item = Program.Context.tblPhongs.FirstOrDefault(p => p.MaPhong.ToString() == maPhong);
+                item.TenPhong = txtTenPhong.Text;
+                item.MaLoaiPhong = int.Parse(cbxLoaiPhong.SelectedValue.ToString());
+                item.TinhTrang = (byte)(ckbTinhTrang.Checked?1:0);
+                Program.Context.SaveChanges();
+                MessageBox.Show("Sửa phòng thành công!");
 
+                this.Close();
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

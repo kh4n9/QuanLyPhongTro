@@ -32,7 +32,7 @@ namespace QuanLyPhongTro.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<tblQuanLy>()
-                .Property(e => e.Email)
+                .Property(e => e.TaiKhoan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<tblQuanLy>()

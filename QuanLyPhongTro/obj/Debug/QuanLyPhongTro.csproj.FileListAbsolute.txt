@@ -17,3 +17,22 @@ C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.Ch
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmLoaiPhong.resources
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmPhong.resources
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmXuLyPhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\QuanLyPhongTro.exe.config
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\QuanLyPhongTro.exe
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\QuanLyPhongTro.pdb
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\EntityFramework.dll
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\EntityFramework.xml
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.AssemblyReference.cache
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmLoaiPhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmPhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmXuLyPhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.Welcome.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.frmMain.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.Properties.Resources.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.GenerateResource.cache
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.CoreCompileInputs.cache
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.CopyComplete
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.exe
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.pdb

@@ -25,6 +25,8 @@ namespace QuanLyPhongTro.Models
 
         public byte? TinhTrang { get; set; }
 
+        public byte? Hidden { get; set; }
+
         public virtual tblLoaiPhong tblLoaiPhong { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

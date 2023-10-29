@@ -13,7 +13,7 @@ namespace QuanLyPhongTro.ChillForm
 {
     public partial class frmLoaiPhong : Form
     {
-        private List<tblLoaiPhong> listLoaiPhong = Program.Context.tblLoaiPhongs.ToList();
+        private List<tblLoaiPhong> listLoaiPhong = Program.Context.tblLoaiPhongs.Where(l => l.Hidden != 1).ToList();
         private int xacNhan = 0; // 1 thì đang ở chế độ thêm
         public frmLoaiPhong()
         {
@@ -37,21 +37,14 @@ namespace QuanLyPhongTro.ChillForm
 
         private void LoadDGV(List<tblLoaiPhong> listLoaiPhong)
         {
-            dgvLoaiPhong.DataSource = null;
-            dgvLoaiPhong.DataSource = listLoaiPhong;
-            dgvLoaiPhong.Columns[0].Width = 100;
-            dgvLoaiPhong.Columns[0].HeaderText = "Mã loại phòng";
-            dgvLoaiPhong.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-            dgvLoaiPhong.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvLoaiPhong.Columns[1].HeaderText = "Tên loại phòng";
-
-            dgvLoaiPhong.Columns[2].Width = 200;
-            dgvLoaiPhong.Columns[2].HeaderText = "Đơn giá";
-            dgvLoaiPhong.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvLoaiPhong.Columns[2].DefaultCellStyle.Format = "n0";
-
-            dgvLoaiPhong.Columns[3].Visible = false;
+            dgvLoaiPhong.Rows.Clear();
+            foreach (tblLoaiPhong item in listLoaiPhong)
+            {
+                int index = dgvLoaiPhong.Rows.Add();
+                dgvLoaiPhong.Rows[index].Cells[0].Value = item.MaLoaiPhong;
+                dgvLoaiPhong.Rows[index].Cells[1].Value = item.TenLoaiPhong;
+                dgvLoaiPhong.Rows[index].Cells[2].Value = item.DonGia;
+            }
         }
 
         private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)
@@ -142,11 +135,11 @@ namespace QuanLyPhongTro.ChillForm
                     }
 
                     string maLoaiPhong = dgvLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
-                    var phongSua = Program.Context.tblLoaiPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == maLoaiPhong);
+                    var phongSua = Program.Context.tblLoaiPhongs.FirstOrDefault(l => l.MaLoaiPhong.ToString() == maLoaiPhong && l.Hidden != 1);
                     phongSua.TenLoaiPhong = txtTenLoai.Text;
                     phongSua.DonGia = int.Parse(txtDonGia.Text);
                     Program.Context.SaveChanges();
-                    listLoaiPhong = Program.Context.tblLoaiPhongs.ToList();
+                    listLoaiPhong = Program.Context.tblLoaiPhongs.Where(l => l.Hidden != 1).ToList();
                     LoadDGV(listLoaiPhong);
                     txtDonGia.Text = "0";
                     txtTenLoai.Text = "";
@@ -173,21 +166,35 @@ namespace QuanLyPhongTro.ChillForm
             {
                 if (MessageBox.Show("Bạn có muốn xóa loại phòng này?","Cảnh báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string maLoaiPhong = dgvLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
-                    var phongXoa = Program.Context.tblLoaiPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == maLoaiPhong);
-                    Program.Context.tblLoaiPhongs.Remove(phongXoa);
-                    Program.Context.SaveChanges();
-                    listLoaiPhong = Program.Context.tblLoaiPhongs.ToList();
-                    LoadDGV(listLoaiPhong);
-                    txtDonGia.Text = "0";
-                    txtTenLoai.Text = "";
+                    if (MessageBox.Show("Yes để ẩn No để xóa hẳn (tất cả các phòng thuộc loại này sẽ mất)","Cảnh báo!",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        string maLoaiPhong = dgvLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
+                        var phongXoa = Program.Context.tblLoaiPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == maLoaiPhong);
+                        phongXoa.Hidden = 1;
+                        Program.Context.SaveChanges();
+                        listLoaiPhong = Program.Context.tblLoaiPhongs.Where(l => l.Hidden != 1).ToList();
+                        LoadDGV(listLoaiPhong);
+                        txtDonGia.Text = "0";
+                        txtTenLoai.Text = "";
+                        MessageBox.Show("Ẩn thành công loại phòng này!");
+                    }
+                    else
+                    {
+                        string maLoaiPhong = dgvLoaiPhong.SelectedRows[0].Cells[0].Value.ToString();
+                        var phongXoa = Program.Context.tblLoaiPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == maLoaiPhong);
+                        Program.Context.tblLoaiPhongs.Remove(phongXoa);
+                        Program.Context.SaveChanges();
+                        listLoaiPhong = Program.Context.tblLoaiPhongs.Where(l => l.Hidden != 1).ToList();
+                        LoadDGV(listLoaiPhong);
+                        txtDonGia.Text = "0";
+                        txtTenLoai.Text = "";
+                        MessageBox.Show("Xóa thành công loại phòng này!");
+                    }
                 }
                 else
                 {
                     return;
                 }
-
-                MessageBox.Show("Xóa loại phòng thành công!");
             }
             else
             {

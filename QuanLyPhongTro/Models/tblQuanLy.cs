@@ -11,7 +11,7 @@ namespace QuanLyPhongTro.Models
     {
         [Key]
         [StringLength(50)]
-        public string Email { get; set; }
+        public string TaiKhoan { get; set; }
 
         [StringLength(250)]
         public string MatKhau { get; set; }
