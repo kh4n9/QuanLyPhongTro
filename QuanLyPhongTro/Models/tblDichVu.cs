@@ -21,6 +21,8 @@ namespace QuanLyPhongTro.Models
         [StringLength(50)]
         public string TenDichVu { get; set; }
 
+        public byte? Hidden { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblDienNuoc> tblDienNuocs { get; set; }
     }

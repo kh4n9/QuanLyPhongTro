@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyPhongTro.ChillForm
 {
-    public partial class Welcome : Form
+    public partial class frmWelcome : Form
     {
-        public Welcome()
+        public frmWelcome()
         {
             InitializeComponent();
         }

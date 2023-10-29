@@ -1,6 +1,6 @@
 ﻿namespace QuanLyPhongTro.ChillForm
 {
-    partial class Welcome
+    partial class frmWelcome
     {
         /// <summary>
         /// Required designer variable.

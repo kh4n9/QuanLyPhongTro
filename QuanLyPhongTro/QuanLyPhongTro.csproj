@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChillForm\frmDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmDichVu.Designer.cs">
+      <DependentUpon>frmDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChillForm\frmLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +79,11 @@
     <Compile Include="ChillForm\frmXuLyPhong.Designer.cs">
       <DependentUpon>frmXuLyPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChillForm\Welcome.cs">
+    <Compile Include="ChillForm\frmWelcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChillForm\Welcome.Designer.cs">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <Compile Include="ChillForm\frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -96,6 +102,9 @@
     <Compile Include="Models\tblThuePhong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChillForm\frmDichVu.resx">
+      <DependentUpon>frmDichVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChillForm\frmLoaiPhong.resx">
       <DependentUpon>frmLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,8 +114,8 @@
     <EmbeddedResource Include="ChillForm\frmXuLyPhong.resx">
       <DependentUpon>frmXuLyPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChillForm\Welcome.resx">
-      <DependentUpon>Welcome.cs</DependentUpon>
+    <EmbeddedResource Include="ChillForm\frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

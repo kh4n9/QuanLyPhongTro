@@ -39,7 +39,7 @@ namespace QuanLyPhongTro
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Welcome welcome = new Welcome();
+            frmWelcome welcome = new frmWelcome();
             ChenForm(welcome);
         }
 
@@ -53,6 +53,12 @@ namespace QuanLyPhongTro
         {
             frmPhong frmPhong = new frmPhong();
             ChenForm(frmPhong);
+        }
+
+        private void dịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDichVu frmDichVu = new frmDichVu();
+            ChenForm(frmDichVu);
         }
     }
 }
