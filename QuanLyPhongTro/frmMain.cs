@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyPhongTro.ChillForm;
+using QuanLyPhongTro.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,38 @@ namespace QuanLyPhongTro
 
         private void ChenForm(Form f)
         {
+            // làm sạch grb
+            grbFormCon.Controls.Clear();
+            // cho phép form truyền vào bị chứa bởi form main
+            f.TopLevel = false;
+            // xóa Bar của form con
+            f.FormBorderStyle = FormBorderStyle.None;
+            // cho form fill ra đúng kích thước grb
+            f.Dock = DockStyle.Fill;
+            // form main lấy tên của form con
+            this.Text = f.Text;
+            // thêm form con vào grb
+            grbFormCon.Controls.Add(f);
+            // show form con lên
+            f.Show();
+        }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            Welcome welcome = new Welcome();
+            ChenForm(welcome);
+        }
+
+        private void loạiPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoaiPhong frmLoaiPhong = new frmLoaiPhong();
+            ChenForm(frmLoaiPhong);
+        }
+
+        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhong frmPhong = new frmPhong();
+            ChenForm(frmPhong);
         }
     }
 }

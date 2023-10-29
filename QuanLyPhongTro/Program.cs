@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyPhongTro.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,9 @@ namespace QuanLyPhongTro
 {
     internal static class Program
     {
+        static PhongTroDBContext context = new PhongTroDBContext();
+        public static PhongTroDBContext Context { get => context; set => context = value; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

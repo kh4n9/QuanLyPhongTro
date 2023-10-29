@@ -13,3 +13,7 @@ C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.cs
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.CopyComplete
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.exe
 C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.pdb
+C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.Welcome.resources
+C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmLoaiPhong.resources
+C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmPhong.resources
+C:\Users\mkhoa\Desktop\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmXuLyPhong.resources

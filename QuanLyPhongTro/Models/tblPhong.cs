@@ -23,7 +23,7 @@ namespace QuanLyPhongTro.Models
 
         public int? MaLoaiPhong { get; set; }
 
-        public byte? TinhTrangThanhToan { get; set; }
+        public byte? TinhTrang { get; set; }
 
         public virtual tblLoaiPhong tblLoaiPhong { get; set; }
 
