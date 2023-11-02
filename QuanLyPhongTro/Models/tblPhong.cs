@@ -12,7 +12,7 @@ namespace QuanLyPhongTro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblPhong()
         {
-            tblThuePhongs = new HashSet<tblThuePhong>();
+            tblHopDongs = new HashSet<tblHopDong>();
         }
 
         [Key]
@@ -23,13 +23,13 @@ namespace QuanLyPhongTro.Models
 
         public int? MaLoaiPhong { get; set; }
 
-        public byte? TinhTrang { get; set; }
+        public byte? TrangThai { get; set; }
 
-        public byte? Hidden { get; set; }
-
-        public virtual tblLoaiPhong tblLoaiPhong { get; set; }
+        public byte? DaXoa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblThuePhong> tblThuePhongs { get; set; }
+        public virtual ICollection<tblHopDong> tblHopDongs { get; set; }
+
+        public virtual tblLoaiPhong tblLoaiPhong { get; set; }
     }
 }

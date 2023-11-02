@@ -9,22 +9,21 @@ namespace QuanLyPhongTro.Models
     [Table("tblCauHinh")]
     public partial class tblCauHinh
     {
-        [StringLength(150)]
+        [Key]
+        [StringLength(50)]
         public string TenPhongTro { get; set; }
 
-        [Key]
-        [Column(Order = 0)]
         [StringLength(50)]
         public string ChuPhongTro { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [StringLength(150)]
+        public int? DonGiaDien { get; set; }
+
+        public int? DonGiaNuoc { get; set; }
+
+        [StringLength(50)]
         public string DiaChiPhongTro { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [StringLength(20)]
+        [StringLength(50)]
         public string SoDienThoai { get; set; }
     }
 }

@@ -12,34 +12,28 @@ namespace QuanLyPhongTro.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblKhachHang()
         {
-            tblThuePhongs = new HashSet<tblThuePhong>();
+            tblHopDong_KhachHang = new HashSet<tblHopDong_KhachHang>();
         }
 
         [Key]
         public int MaKhachHang { get; set; }
 
-        [StringLength(10)]
-        public string Ho { get; set; }
+        [StringLength(50)]
+        public string TenKhach { get; set; }
 
-        [StringLength(30)]
-        public string TenLot { get; set; }
-
-        [StringLength(10)]
-        public string Ten { get; set; }
-
-        [StringLength(20)]
+        [StringLength(50)]
         public string CCCD { get; set; }
 
-        [StringLength(20)]
+        [StringLength(50)]
         public string DienThoai { get; set; }
 
-        [StringLength(150)]
+        [StringLength(50)]
         public string QueQuan { get; set; }
 
-        [StringLength(150)]
+        [StringLength(50)]
         public string HKTT { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblThuePhong> tblThuePhongs { get; set; }
+        public virtual ICollection<tblHopDong_KhachHang> tblHopDong_KhachHang { get; set; }
     }
 }

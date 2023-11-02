@@ -13,44 +13,42 @@ namespace QuanLyPhongTro.ChillForm
 {
     public partial class frmPhong : Form
     {
-        List<tblPhong> listPhong = Program.Context.tblPhongs.Where(p => p.Hidden != 1).ToList();
+        List<tblPhong> listPhong = Program.Context.tblPhongs.ToList();
         public frmPhong()
         {
             InitializeComponent();
-            LoadDGV(listPhong);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             frmXuLyPhong frmXuLyPhong = new frmXuLyPhong(true, null);
             frmXuLyPhong.ShowDialog();
-            listPhong = Program.Context.tblPhongs.Where(p => p.Hidden != 1).ToList();
+            listPhong = Program.Context.tblPhongs.ToList();
             LoadDGV(listPhong);
         }
 
         private void LoadDGV(List<tblPhong> listPhong)
         {
             dgvPhong.Rows.Clear();
-            foreach (tblPhong item in listPhong)
+            foreach (var item in listPhong)
             {
                 int index = dgvPhong.Rows.Add();
                 dgvPhong.Rows[index].Cells[0].Value = item.MaPhong;
                 dgvPhong.Rows[index].Cells[1].Value = item.TenPhong;
-                dgvPhong.Rows[index].Cells[2].Value = item.tblLoaiPhong.TenLoaiPhong + (item.tblLoaiPhong.Hidden!=1?"":" (Đã xóa)");
-                dgvPhong.Rows[index].Cells[3].Value = item.TinhTrang==1?"Đang thuê":"Chưa thuê";
+                dgvPhong.Rows[index].Cells[2].Value = item.tblLoaiPhong.TenLoaiPhong;
+                dgvPhong.Rows[index].Cells[3].Value = item.TrangThai == 1?"Đang thuê":"Trống";
             }
         }
 
         private void txtTim_TextChanged(object sender, EventArgs e)
         {
-            if (txtTim.Text.Length == 0)
+            if (txtTim.Text.Length > 0)
             {
-                LoadDGV(listPhong);
+                LoadDGV(listPhong.Where(p => p.TenPhong.ToString().Contains(txtTim.Text.ToString())).ToList());
             }
             else
             {
-                var listTim = Program.Context.tblPhongs.Where(p => p.TenPhong.Contains(txtTim.Text) && p.Hidden != 1).ToList();
-                LoadDGV(listTim);
+                LoadDGV(listPhong);
             }
         }
 
@@ -58,31 +56,22 @@ namespace QuanLyPhongTro.ChillForm
         {
             frmXuLyPhong frmXuLyPhong = new frmXuLyPhong(false, dgvPhong.SelectedRows[0].Cells[0].Value.ToString());
             frmXuLyPhong.ShowDialog();
-            listPhong = Program.Context.tblPhongs.Where(p => p.Hidden != 1).ToList();
+            listPhong = Program.Context.tblPhongs.ToList();
             LoadDGV(listPhong);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dgvPhong.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn phòng cần xóa!");
-                return;
-            }
-            if(MessageBox.Show("Yes để ẩn No để xóa luôn phòng (sẽ ảnh hưởng tới các dữ liệu khác)","Cảnh báo!",MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                var item = Program.Context.tblPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == dgvPhong.SelectedRows[0].Cells[0].Value.ToString());
-                item.Hidden = 1;
-            }
-            else
-            {
-                string xoa = dgvPhong.SelectedRows[0].Cells[0].Value.ToString();
-                var item = Program.Context.tblPhongs.FirstOrDefault(p => p.MaLoaiPhong.ToString() == xoa);
-                Program.Context.tblPhongs.Remove(item);
-                Program.Context.SaveChanges();
-                listPhong = Program.Context.tblPhongs.Where(p => p.Hidden != 1).ToList();
-                LoadDGV(listPhong);
-            }
+            Program.Context.tblPhongs.Remove(listPhong.FirstOrDefault(p =>p.MaPhong.ToString() == dgvPhong.SelectedRows[0].Cells[0].Value.ToString()));
+            Program.Context.SaveChanges();
+            listPhong = Program.Context.tblPhongs.ToList();
+            LoadDGV(listPhong);
+            MessageBox.Show("Xóa thành công!");
+        }
+
+        private void frmPhong_Load(object sender, EventArgs e)
+        {
+            LoadDGV(listPhong);
         }
     }
 }

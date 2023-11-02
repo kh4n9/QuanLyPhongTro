@@ -12,17 +12,22 @@ namespace QuanLyPhongTro.Models
         {
         }
 
-        public virtual DbSet<tblDichVu> tblDichVus { get; set; }
-        public virtual DbSet<tblDienNuoc> tblDienNuocs { get; set; }
+        public virtual DbSet<tblCauHinh> tblCauHinhs { get; set; }
+        public virtual DbSet<tblChiTietHopDong> tblChiTietHopDongs { get; set; }
+        public virtual DbSet<tblHopDong> tblHopDongs { get; set; }
+        public virtual DbSet<tblHopDong_KhachHang> tblHopDong_KhachHang { get; set; }
         public virtual DbSet<tblKhachHang> tblKhachHangs { get; set; }
         public virtual DbSet<tblLoaiPhong> tblLoaiPhongs { get; set; }
         public virtual DbSet<tblPhong> tblPhongs { get; set; }
         public virtual DbSet<tblQuanLy> tblQuanLies { get; set; }
-        public virtual DbSet<tblThuePhong> tblThuePhongs { get; set; }
-        public virtual DbSet<tblCauHinh> tblCauHinhs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<tblHopDong>()
+                .HasMany(e => e.tblHopDong_KhachHang)
+                .WithRequired(e => e.tblHopDong)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<tblKhachHang>()
                 .Property(e => e.CCCD)
                 .IsUnicode(false);
@@ -31,16 +36,17 @@ namespace QuanLyPhongTro.Models
                 .Property(e => e.DienThoai)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<tblKhachHang>()
+                .HasMany(e => e.tblHopDong_KhachHang)
+                .WithRequired(e => e.tblKhachHang)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<tblQuanLy>()
                 .Property(e => e.TaiKhoan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<tblQuanLy>()
                 .Property(e => e.MatKhau)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<tblCauHinh>()
-                .Property(e => e.SoDienThoai)
                 .IsUnicode(false);
         }
     }

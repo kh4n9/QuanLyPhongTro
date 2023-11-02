@@ -23,8 +23,6 @@ namespace QuanLyPhongTro.Models
 
         public int? DonGia { get; set; }
 
-        public byte? Hidden { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblPhong> tblPhongs { get; set; }
     }

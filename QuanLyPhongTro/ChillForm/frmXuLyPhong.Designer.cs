@@ -33,7 +33,6 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.cbxLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.ckbTinhTrang = new System.Windows.Forms.CheckBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.grbXuLyPhong.Controls.Add(this.btnHuy);
             this.grbXuLyPhong.Controls.Add(this.btnXacNhan);
             this.grbXuLyPhong.Controls.Add(this.cbxLoaiPhong);
-            this.grbXuLyPhong.Controls.Add(this.ckbTinhTrang);
             this.grbXuLyPhong.Controls.Add(this.txtTenPhong);
             this.grbXuLyPhong.Controls.Add(this.label2);
             this.grbXuLyPhong.Controls.Add(this.label1);
@@ -93,17 +91,6 @@
             this.cbxLoaiPhong.Name = "cbxLoaiPhong";
             this.cbxLoaiPhong.Size = new System.Drawing.Size(304, 21);
             this.cbxLoaiPhong.TabIndex = 3;
-            // 
-            // ckbTinhTrang
-            // 
-            this.ckbTinhTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ckbTinhTrang.AutoSize = true;
-            this.ckbTinhTrang.Location = new System.Drawing.Point(96, 157);
-            this.ckbTinhTrang.Name = "ckbTinhTrang";
-            this.ckbTinhTrang.Size = new System.Drawing.Size(104, 17);
-            this.ckbTinhTrang.TabIndex = 2;
-            this.ckbTinhTrang.Text = "Đang được thuê";
-            this.ckbTinhTrang.UseVisualStyleBackColor = true;
             // 
             // txtTenPhong
             // 
@@ -160,7 +147,6 @@
 
         private System.Windows.Forms.GroupBox grbXuLyPhong;
         private System.Windows.Forms.ComboBox cbxLoaiPhong;
-        private System.Windows.Forms.CheckBox ckbTinhTrang;
         private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

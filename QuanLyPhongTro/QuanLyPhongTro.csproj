@@ -55,11 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChillForm\frmDichVu.cs">
+    <Compile Include="ChillForm\frmCauHinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChillForm\frmDichVu.Designer.cs">
-      <DependentUpon>frmDichVu.cs</DependentUpon>
+    <Compile Include="ChillForm\frmCauHinh.Designer.cs">
+      <DependentUpon>frmCauHinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChillForm\frmDienNuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmDienNuoc.Designer.cs">
+      <DependentUpon>frmDienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChillForm\frmKetThucHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmKetThucHopDong.Designer.cs">
+      <DependentUpon>frmKetThucHopDong.cs</DependentUpon>
     </Compile>
     <Compile Include="ChillForm\frmLoaiPhong.cs">
       <SubType>Form</SubType>
@@ -73,6 +85,18 @@
     <Compile Include="ChillForm\frmPhong.Designer.cs">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChillForm\frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChillForm\frmThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmThuePhong.Designer.cs">
+      <DependentUpon>frmThuePhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChillForm\frmXuLyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,18 @@
     <Compile Include="ChillForm\frmWelcome.Designer.cs">
       <DependentUpon>frmWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChillForm\frmXuLyThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmXuLyThuePhong.Designer.cs">
+      <DependentUpon>frmXuLyThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChillForm\frmXuLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChillForm\frmXuLyKhachHang.Designer.cs">
+      <DependentUpon>frmXuLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,17 +129,24 @@
     </Compile>
     <Compile Include="Models\PhongTroDBContext.cs" />
     <Compile Include="Models\tblCauHinh.cs" />
-    <Compile Include="Models\tblDichVu.cs" />
-    <Compile Include="Models\tblDienNuoc.cs" />
+    <Compile Include="Models\tblChiTietHopDong.cs" />
+    <Compile Include="Models\tblHopDong.cs" />
+    <Compile Include="Models\tblHopDong_KhachHang.cs" />
     <Compile Include="Models\tblKhachHang.cs" />
     <Compile Include="Models\tblLoaiPhong.cs" />
     <Compile Include="Models\tblPhong.cs" />
     <Compile Include="Models\tblQuanLy.cs" />
-    <Compile Include="Models\tblThuePhong.cs" />
+    <Compile Include="Objects\KhachHang.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChillForm\frmDichVu.resx">
-      <DependentUpon>frmDichVu.cs</DependentUpon>
+    <EmbeddedResource Include="ChillForm\frmCauHinh.resx">
+      <DependentUpon>frmCauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmDienNuoc.resx">
+      <DependentUpon>frmDienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmKetThucHopDong.resx">
+      <DependentUpon>frmKetThucHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChillForm\frmLoaiPhong.resx">
       <DependentUpon>frmLoaiPhong.cs</DependentUpon>
@@ -111,11 +154,23 @@
     <EmbeddedResource Include="ChillForm\frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmThuePhong.resx">
+      <DependentUpon>frmThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChillForm\frmXuLyPhong.resx">
       <DependentUpon>frmXuLyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChillForm\frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmXuLyThuePhong.resx">
+      <DependentUpon>frmXuLyThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChillForm\frmXuLyKhachHang.resx">
+      <DependentUpon>frmXuLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -150,5 +205,6 @@
   <ItemGroup>
     <None Include="Resources\bg_bggenerator_com.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

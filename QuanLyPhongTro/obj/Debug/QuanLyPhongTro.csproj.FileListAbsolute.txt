@@ -35,5 +35,11 @@ C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanL
 C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.csproj.CopyComplete
 C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.exe
 C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.pdb
-C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmDichVu.resources
 C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmWelcome.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmThuePhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmXuLyThuePhong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmXuLyKhachHang.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmThanhToan.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmDienNuoc.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmKetThucHopDong.resources
+C:\Users\mkhoa\OneDrive\Máy tính\QuanLyPhongTro\QuanLyPhongTro\obj\Debug\QuanLyPhongTro.ChillForm.frmCauHinh.resources

@@ -55,10 +55,21 @@ namespace QuanLyPhongTro
             ChenForm(frmPhong);
         }
 
-        private void dịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDichVu frmDichVu = new frmDichVu();
-            ChenForm(frmDichVu);
+            frmThuePhong frmThuePhong = new frmThuePhong();
+            ChenForm(frmThuePhong);
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cấuHìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCauHinh frmCauHinh = new frmCauHinh();
+            frmCauHinh.ShowDialog();
         }
     }
 }
